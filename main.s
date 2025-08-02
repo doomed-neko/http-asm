@@ -64,7 +64,6 @@ macro accept sockfd, addr, addr_len{
   syscall3 SYS_accept, sockfd, addr, addr_len
 }
 
-
 macro exit code{
   syscall1 SYS_exit, code
 }
@@ -159,7 +158,6 @@ response db "HTTP/1.1 200 OK", 13, 10
          db "Connection: close", 13, 10
          db 13, 10
          db "<p>this website is hosted by assembly</p>"
-         db "<p>suck my nuts php, and you too js</p>"
-         db "<p><a href=''>Flat Assembler</a>, used in this small project</p>"
+         db "<p><a href='https://flatassembler.net/'>Flat Assembler</a>, used in this small project</p>"
 
 response_len = $ - response
